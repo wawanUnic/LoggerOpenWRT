@@ -12,13 +12,13 @@ External logger for openWRT
 - Storage: SSD 120GB
 
 ## Ports used (external):
-- 8088 - dozzle (for docker monitoring)
-- 2020 UDP - receive logs (syslog openWRT)
-- 2221 HTTP - metrics for Prometheus
+- 2020 - UDP - receive logs (syslog openWRT)
+- 2221 - HTTP - metrics for Prometheus
 - 2222 - HTTP - PhpMyAdmin
 - 2223 - TCP - MySQL
 - 2224 - HTTP - Prometheus
 - 2225 - HTTP - Grafana
+- 2226 - TCP - dozzle (for docker monitoring)
 
 ## Install Docker
 ```
@@ -40,7 +40,7 @@ docker-compose --version
 ## Install Dozzle
 This is a lightweight open-source an application with a web interface designed to monitor Docker container logs in real time. It allows you to track events in logs without having to access the file system.
 
-[Dozzle](https://github.com/)
+[Dozzle]([https://github.com/](https://github.com/wawanUnic/LoggerOpenWRT/blob/main/dozzle.md))
 
 ## Remove
 
