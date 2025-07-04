@@ -1,6 +1,6 @@
 # Dozzle monitoring service
 
-### Web panel - port 2026
+### Web panel - port 2226
 
 Does not work as root
 
@@ -32,5 +32,5 @@ sudo docker rm dozzle
 
 Run the container (permanently work)
 ```
-sudo docker run -d --restart unless-stopped --name dozzle -v /var/run/docker.sock:/var/run/docker.sock -v ~/dozzle:/data -p 2026:8080 amir20/dozzle:latest --auth-provider simple --auth-ttl 48h --enable-actions --no-analytics
+sudo docker run -d --restart unless-stopped --name dozzle -v /var/run/docker.sock:/var/run/docker.sock -v ~/dozzle:/data -p 2226:8080 amir20/dozzle:latest --auth-provider simple --auth-ttl 48h --enable-actions --no-analytics
 ```
