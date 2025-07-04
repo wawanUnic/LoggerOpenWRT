@@ -40,7 +40,7 @@ docker-compose --version
 ## Install Dozzle
 This is a lightweight open-source an application with a web interface designed to monitor Docker container logs in real time. It allows you to track events in logs without having to access the file system.
 
-[Dozzle]([https://github.com/](https://github.com/wawanUnic/LoggerOpenWRT/blob/main/dozzle.md))
+[Dozzle](https://github.com/wawanUnic/LoggerOpenWRT/blob/main/dozzle.md)
 
 ## Remove
 
