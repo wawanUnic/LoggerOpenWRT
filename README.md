@@ -1,6 +1,8 @@
 # LoggerOpenWRT
 External logger for openWRT
 
+(No more than 50 records per second!)
+
 ## The setup is done for the machine
 
 - OS: Ubuntu 24.04.2 LTS
