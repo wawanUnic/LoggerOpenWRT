@@ -9,8 +9,14 @@ External logger for openWRT
 - RAM: 32GB DDR4 2133 MHz
 - Storage: SSD 120GB
 
-## Ports used:
+## Ports used (external):
 - 8088 - dozzle (for docker monitoring)
+- 2020 UDP - receive logs (syslog openWRT)
+- 2221 HTTP - metrics for Prometheus
+- 2222 - HTTP - PhpMyAdmin
+- 2223 - TCP - MySQL
+- 2224 - HTTP - Prometheus
+- 2225 - HTTP - Grafana
 
 ## Install Docker
 ```
