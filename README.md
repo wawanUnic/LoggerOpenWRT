@@ -42,8 +42,12 @@ This is a lightweight open-source an application with a web interface designed t
 
 [Dozzle](https://github.com/wawanUnic/LoggerOpenWRT/blob/main/dozzle.md)
 
-## http://localhost:2221/metrics
+## Test
+```
+python simulate_logs.py --ip 192.168.1.117 --port 9999 --rate 100 --duration 120 --devices 10
+```
 
+## http://localhost:2221/metrics
 ```
 # HELP log_receiver_log_count_total Total logs received
 log_receiver_log_count_total 1805
