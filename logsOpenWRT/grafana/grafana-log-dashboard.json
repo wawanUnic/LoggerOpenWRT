@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Log Receiver Overview",
+    "uid": null,
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Total Received Logs",
+        "gridPos": { "x": 0, "y": 0, "w": 24, "h": 8 },
+        "targets": [
+          {
+            "expr": "log_receiver_log_count_total",
+            "refId": "A"
+          }
+        ],
+        "lines": true,
+        "fill": 1,
+        "linewidth": 2
+      }
+    ],
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "10s"
+  }
+}
