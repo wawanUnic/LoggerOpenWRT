@@ -42,6 +42,21 @@ This is a lightweight open-source an application with a web interface designed t
 
 [Dozzle](https://github.com/wawanUnic/LoggerOpenWRT/blob/main/dozzle.md)
 
+## http://localhost:2221/metrics
+
+```
+# HELP log_receiver_log_count_total Total logs received
+log_receiver_log_count_total 1805
+log_receiver_severity_total{level="INFO"} 1270
+log_receiver_severity_total{level="WARNING"} 268
+log_receiver_severity_total{level="NOTICE"} 267
+log_receiver_facility_total{facility="DAEMON"} 1771
+log_receiver_facility_total{facility="KERNEL"} 32
+log_receiver_facility_total{facility="USER"} 2
+log_receiver_source_ip_total{ip="192.168.4.155"} 917
+log_receiver_source_ip_total{ip="192.168.4.142"} 888
+```
+
 ## Remove
 
 ```
