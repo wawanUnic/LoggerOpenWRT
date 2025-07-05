@@ -44,10 +44,10 @@ This is a lightweight open-source an application with a web interface designed t
 
 ## Test
 ```
-python simulate_logs.py --ip 192.168.1.117 --port 9999 --rate 100 --duration 120 --devices 10
+python simulate_logs.py --ip 192.168.4.117 --port 9999 --rate 100 --duration 120 --devices 10
 ```
 
-## http://192.168.1.117:2221/metrics
+## http://192.168.4.117:2221/metrics
 ```
 # HELP log_receiver_log_count_total Total logs received
 log_receiver_log_count_total 1805
