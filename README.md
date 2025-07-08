@@ -61,11 +61,19 @@ log_receiver_source_ip_total{ip="192.168.4.155"} 917
 log_receiver_source_ip_total{ip="192.168.4.142"} 888
 ```
 
-## Remove
+## Reinstall with Delete
 
 ```
 sudo docker-compose down --volumes --remove-orphans
 sudo docker image prune -a
+sudo docker-compose build --no-cache
+sudo docker-compose up -d
+```
+
+## Reinstall without Delete
+
+```
+sudo docker-compose down --volumes --remove-orphans
 sudo docker-compose build --no-cache
 sudo docker-compose up -d
 ```
