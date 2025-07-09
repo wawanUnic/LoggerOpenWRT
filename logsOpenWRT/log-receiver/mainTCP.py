@@ -14,10 +14,21 @@ TCP_PORT = 9999
 WORKER_COUNT = 4
 MESSAGE_QUEUE = Queue()
 
-FACILITY_LABELS = {...}  # (оставь как есть)
-SEVERITY_LABELS = [...]  # (оставь как есть)
+FACILITY_LABELS = {
+    0: "KERNEL", 1: "USER", 2: "MAIL", 3: "DAEMON", 4: "AUTH",
+    5: "SYSLOG", 6: "LPR", 7: "NEWS", 8: "UUCP", 9: "CRON",
+    10: "AUTHPRIV", 11: "FTP", 16: "LOCAL0", 17: "LOCAL1", 18: "LOCAL2",
+    19: "LOCAL3", 20: "LOCAL4", 21: "LOCAL5", 22: "LOCAL6", 23: "LOCAL7"
+}
 
-DB_CONFIG = {...}        # (оставь как есть)
+SEVERITY_LABELS = ['EMERG', 'ALERT', 'CRIT', 'ERR', 'WARNING', 'NOTICE', 'INFO', 'DEBUG']
+
+DB_CONFIG = {
+    'host': 'mysql',
+    'user': 'loguser',
+    'password': 'logpass',
+    'database': 'logs'
+}
 
 log_count = 0
 severity_counter = defaultdict(int)
@@ -84,7 +95,7 @@ def handle_tcp_client(conn, addr):
             data = conn.recv(4096)
             if not data:
                 break
-            MESSAGE_QUEUE.put((data.decode('utf-8', errors='replace'), addr, datetime.utcnow()))
+            MESSAGE_QUEUE.put((data.decode('utf-8', errors='replace'), addr, datetime.now()))
 
 # Воркер БД
 def db_worker():
