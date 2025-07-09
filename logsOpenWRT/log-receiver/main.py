@@ -87,7 +87,7 @@ def run_udp_listener():
 
     while True:
         data, addr = sock.recvfrom(4096)
-        MESSAGE_QUEUE.put((data.decode('utf-8', errors='replace'), addr, datetime.utcnow()))
+        MESSAGE_QUEUE.put((data.decode('utf-8', errors='replace'), addr, datetime.now()))
 
 # Воркер сохранения в базу
 def db_worker():
