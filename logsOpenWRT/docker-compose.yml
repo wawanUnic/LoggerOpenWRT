@@ -5,6 +5,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
+      TZ: Europe/Warsaw
       MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: logs
       MYSQL_USER: loguser
@@ -13,6 +14,7 @@ services:
       - "2223:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/conf.d/custom.cnf
 
   phpmyadmin:
     image: phpmyadmin
@@ -27,6 +29,8 @@ services:
   log-receiver:
     build: ./log-receiver
     restart: always
+    environment:
+      TZ: Europe/Warsaw
     ports:
       - "2220:9999/udp"
       - "2221:5000"
